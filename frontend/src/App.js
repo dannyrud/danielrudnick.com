@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -12,9 +11,9 @@ import About from './pages/About';
 
 function App() {
   return (
-    <Router>
+    <>
       {/* Navbar */}
-      <Navbar bg="primary" expand="lg" className="text-warning">
+      <Navbar bg="primary" expand="lg" className="text-warning sticky-top">
         <Container>
           {/* Left: Home */}
           <Nav className="me-auto align-items-center">
@@ -39,22 +38,23 @@ function App() {
 
           {/* Right: Dropdown */}
           <Nav className="ms-auto align-items-center">
-          <NavDropdown
+            <NavDropdown
               title={<i className="bi bi-list text-warning" style={{ fontSize: '1.5rem' }}></i>}
               id="basic-nav-dropdown"
               align="end"
               menuVariant="dark"
+              className="custom-dropdown"
             >
-              <NavDropdown.Item href="/projects" className="bg-primary text-warning">
+              <NavDropdown.Item href="#projects" className="bg-primary text-warning">
                 Projects
               </NavDropdown.Item>
-              <NavDropdown.Item href="/experience" className="bg-primary text-warning">
+              <NavDropdown.Item href="#experience" className="bg-primary text-warning">
                 Experience
               </NavDropdown.Item>
-              <NavDropdown.Item href="/education" className="bg-primary text-warning">
+              <NavDropdown.Item href="#education" className="bg-primary text-warning">
                 Education
               </NavDropdown.Item>
-              <NavDropdown.Item href="/about" className="bg-primary text-warning">
+              <NavDropdown.Item href="#about" className="bg-primary text-warning">
                 About
               </NavDropdown.Item>
             </NavDropdown>
@@ -62,15 +62,23 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* Routes */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
+      {/* Sections */}
+      <div id="home" className="section">
+        <Home />
+      </div>
+      <div id="projects" className="section">
+        <Projects />
+      </div>
+      <div id="experience" className="section">
+        <Experience />
+      </div>
+      <div id="education" className="section">
+        <Education />
+      </div>
+      <div id="about" className="section">
+        <About />
+      </div>
+    </>
   );
 }
 

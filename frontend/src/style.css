@@ -1,0 +1,17 @@
+.custom-dropdown .dropdown-menu {
+    background-color: #0d6efd !important; /* Fully blue background */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove shadow */
+  }
+  
+  .custom-dropdown .dropdown-item {
+    background-color: #0d6efd !important; /* Match dropdown item background */
+    color: #ffc107 !important; /* Yellow text for contrast */
+    padding: 10px 20px; /* Add some padding for a natural look */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+  }
+  
+  .custom-dropdown .dropdown-item:hover {
+    background-color: #084298 !important; /* Slightly darker blue on hover */
+  }
+  
