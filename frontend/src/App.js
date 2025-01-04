@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import Education from './pages/Education';
-import About from './pages/About';
 
 function App() {
   return (
@@ -54,9 +53,6 @@ function App() {
               <NavDropdown.Item href="#education" className="bg-primary text-warning">
                 Education
               </NavDropdown.Item>
-              <NavDropdown.Item href="#about" className="bg-primary text-warning">
-                About
-              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Container>
@@ -74,9 +70,6 @@ function App() {
       </div>
       <div id="education" className="section">
         <Education />
-      </div>
-      <div id="about" className="section">
-        <About />
       </div>
     </>
   );

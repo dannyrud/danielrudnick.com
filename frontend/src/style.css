@@ -1,17 +1,52 @@
 .custom-dropdown .dropdown-menu {
-    background-color: #0d6efd !important; /* Fully blue background */
-    border: none; /* Remove border */
-    box-shadow: none; /* Remove shadow */
+    background-color: #0d6efd !important;
+    border: none;
+    box-shadow: none;
   }
   
   .custom-dropdown .dropdown-item {
-    background-color: #0d6efd !important; /* Match dropdown item background */
-    color: #ffc107 !important; /* Yellow text for contrast */
-    padding: 10px 20px; /* Add some padding for a natural look */
-    transition: background-color 0.2s ease; /* Smooth hover effect */
+    background-color: #0d6efd !important;
+    color: #ffc107 !important;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease;
   }
   
   .custom-dropdown .dropdown-item:hover {
-    background-color: #084298 !important; /* Slightly darker blue on hover */
+    background-color: #084298 !important;
   }
+  
+  .project-card {
+    overflow: hidden;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    height: auto; /* Allows it to expand for the description */
+  }
+  
+  .project-description {
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.3s ease, height 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .project-card:hover .project-description {
+    opacity: 1;
+    height: auto; /* Expands to show the full description */
+  }
+  
+  .skill-badge {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 5px 10px;
+    background-color: #ffc107;
+    color: #000;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  
   

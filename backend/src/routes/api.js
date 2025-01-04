@@ -25,7 +25,9 @@ router.get('/projects', async (req, res) => {
     const connection = await pool.getConnection();
 
     // Query the database
-    const [rows, _] = await connection.query('SELECT * FROM projects');
+    const [rows, _] = await connection.query(
+      'SELECT * FROM projects ORDER BY date DESC'
+    );
 
     // Release the connection back to the pool
     connection.release();
@@ -41,6 +43,5 @@ router.get('/projects', async (req, res) => {
 // Other endpoints
 router.get('/experience', (req, res) => res.json({ page: 'Experience' }));
 router.get('/education', (req, res) => res.json({ page: 'Education' }));
-router.get('/about', (req, res) => res.json({ page: 'About' }));
 
 module.exports = router;
