@@ -75,12 +75,18 @@ function Projects() {
               <div className="project-description">
                 <Card.Text>{project.description}</Card.Text>
               </div>
-              <Button href={project.github_url} className="mb-3">
-                Github
-              </Button>
+              {project.github_url ? (
+                <Button href={project.github_url} className="mb-3">
+                  Github
+                </Button>
+              ) : (
+                <p className="text-muted mt-3">
+                This repository is private due to the University of Michigan Honor Code.
+              </p>
+              )}
               <hr className="my-3" />
               <div className="project-skills">
-                {project.skills.map((skill, index) => (
+                {project.info.map((skill, index) => (
                   <span
                     key={index}
                     className="skill-badge"
