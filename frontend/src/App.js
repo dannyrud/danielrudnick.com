@@ -44,11 +44,11 @@ function App() {
               menuVariant="dark"
               className="custom-dropdown"
             >
-              <NavDropdown.Item href="#projects" className="bg-primary text-warning">
-                Projects
-              </NavDropdown.Item>
               <NavDropdown.Item href="#experience" className="bg-primary text-warning">
                 Experience
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#projects" className="bg-primary text-warning">
+                Projects
               </NavDropdown.Item>
               <NavDropdown.Item href="#education" className="bg-primary text-warning">
                 Education
@@ -62,11 +62,11 @@ function App() {
       <div id="home" className="section">
         <Home />
       </div>
-      <div id="projects" className="section">
-        <Projects />
-      </div>
       <div id="experience" className="section">
         <Experience />
+      </div>
+      <div id="projects" className="section">
+        <Projects />
       </div>
       <div id="education" className="section">
         <Education />

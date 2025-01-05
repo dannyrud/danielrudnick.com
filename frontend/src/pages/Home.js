@@ -9,14 +9,14 @@ const Home = () => {
         <Col md={4} className="text-center">
           <img
             src={`${process.env.PUBLIC_URL}/images/dogs.jpg`}
-            alt="Danny Rudnick"
+            alt="Daniel Rudnick"
             className="rounded-circle shadow-lg img-fluid"
           />
         </Col>
 
         {/* Facts Section */}
         <Col md={8}>
-          <h1 className="text-warning mb-3">Hi, I'm Danny Rudnick!</h1>
+          <h1 className="text-dark mb-3 text-center">Hi, I'm Daniel Rudnick!</h1>
           <p className="text-dark">
             I'm a Computer Science student with a strong passion for backend development and computer security. Here's a little more about me:
           </p>
