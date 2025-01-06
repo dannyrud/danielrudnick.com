@@ -3,44 +3,99 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Home = () => {
   return (
-    <Container className="my-5">
-      <Row className="align-items-center">
-        {/* Profile Picture */}
-        <Col md={4} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/images/dogs.jpg`}
-            alt="Daniel Rudnick"
-            className="rounded-circle shadow-lg img-fluid"
-          />
-        </Col>
+    <Container
+      fluid
+      className="d-flex align-items-center"
+      style={{
+        minHeight: "75vh",
+        paddingTop: "4rem",
+        paddingBottom: "4rem",
+        background: "linear-gradient(180deg, #fffbe6, #fffcf2)",
+      }}
+    >
+      <Container>
+        <Row className="align-items-center">
+          <Col
+            xs={12}
+            md={4}
+            className="text-center mb-4 mb-md-0"
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/images/dogs.jpg`}
+              alt="Daniel Rudnick"
+              className="rounded-circle shadow-lg img-fluid"
+              style={{
+                maxWidth: "300px",
+                height: "auto",
+              }}
+            />
+          </Col>
 
-        {/* Facts Section */}
-        <Col md={8}>
-          <h1 className="text-dark mb-3 text-center">Hi, I'm Daniel Rudnick!</h1>
-          <p className="text-dark">
-            I'm a Computer Science student with a strong passion for backend development and computer security. Here's a little more about me:
-          </p>
-          <ul className="text-dark">
-            <li>🧑‍🎓 Junior at the University of Michigan</li>
-            <li>💻 I have the most development experience with C++ and Python</li>
-            <li>🔒 Former SWE intern at <a href="https://www.repacket.com" target="_blank" rel="noopener noreferrer">Repacket</a></li>
-            <li>🦮 I love my dogs!</li>
-
-          </ul>
-
-          {/* Call-to-Actions */}
-          <div className="mt-4">
-            <Button
-              href={`${process.env.PUBLIC_URL}/files/DanielRudnickResume.pdf`}
-              variant="outline-warning"
-              target="_blank"
-              rel="noopener noreferrer"
+          {/* Facts Section */}
+          <Col
+            xs={12}
+            md={8}
+            className="text-center text-md-start" 
+          >
+            <h1
+              className="text-dark mb-4"
+              style={{
+                fontSize: "2.8rem",
+                fontWeight: "bold",
+              }}
             >
-              My Resume
-            </Button>
-          </div>
-        </Col>
-      </Row>
+              Hi, I'm Daniel Rudnick!
+            </h1>
+            <p
+              className="text-dark"
+              style={{
+                fontSize: "1.25rem",
+              }}
+            >
+              I'm a Computer Science student with a strong passion for backend
+              development and computer security. Here's a little more about me:
+            </p>
+            <ul
+              className="text-dark list-unstyled"
+              style={{
+                fontSize: "1.15rem", 
+                lineHeight: "1.8",
+              }}
+            >
+              <li>🧑‍🎓 Junior at the University of Michigan</li>
+              <li>💻 I have the most development experience with C++ and Python</li>
+              <li>
+                🔒 Former SWE intern at{" "}
+                <a
+                  href="https://www.repacket.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#0d6efd' }}
+                >
+                  Repacket
+                </a>
+              </li>
+              <li>🦮 I love my dogs!</li>
+            </ul>
+
+            <div className="mt-4">
+              <Button
+                href={`${process.env.PUBLIC_URL}/files/DanielRudnickResume.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: "0.75rem 1.5rem",
+                  fontSize: "1.1rem",
+                  color: '#ffc107',
+                  backgroundColor: '#0d6efd'
+                }}
+              >
+                My Resume
+              </Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 };

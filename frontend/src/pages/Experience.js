@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
 function Experience() {
-  const experiences = [
-    {
-      id: 1,
-      title: 'Software Engineer Intern',
-      company: 'Repacket Inc',
-      duration: 'May 2024 - August 2024',
-      description: 'Developed secure web gateways and implemented authentication protocols for enterprise systems.',
-    },
-  ];
+  const [experiences, setExperiences] = useState([]);
+  useEffect(() => {
+    let ignoreStaleRequest = false;
+    const url = "http://localhost:5001/api/experience";
+    fetch(url, { credentials: "same-origin" })
+      .then((response) => {
+        if (!response.ok) throw Error(response.statusText);
+        return response.json();
+      })
+      .then((data) => {
+        if (!ignoreStaleRequest) {
+          setExperiences(data);
+        }
+      })
+      .catch((error) => console.log(error));
 
+    return () => {
+      ignoreStaleRequest = true;
+    };
+  }, []);
+  
   return (
     <div className="py-5">
       <Container>
@@ -37,22 +48,21 @@ function Experience() {
         {experiences.map((experience) => (
           <Row key={experience.id} className="mb-4 justify-content-center">
             <Col md={8}>
-            <Card className="shadow-lg rounded" style={{ backgroundColor: '#f8f9fa' }}>
-              <Card.Body>
+            <Card className="shadow-lg rounded" style={{ backgroundColor: '#0d6efd' }}>
+              <Card.Body style={{ color: '#FFC107' }}>
                 
-                <Card.Title className="fs-3 fw-bold mb-3">{experience.company}</Card.Title>
-
+              <div className="d-flex justify-content-between align-items-center mb-2">
+                <Card.Title className="fs-3 fw-bold mb-0">{experience.company}</Card.Title>
+                <span className="fs-6" style={{ fontStyle: 'italic' }}>
+                  {experience.start_date}-{experience.end_date}
+                </span>
+              </div>
                 
-                <Card.Subtitle className="text-muted fs-5 mb-2">
-                  {experience.title}
+                <Card.Subtitle className="fs-5 mb-2">
+                  {experience.position}
                 </Card.Subtitle>
-                
-                
-                <Card.Subtitle className="text-muted fs-6 mb-4">
-                  {experience.duration}
-                </Card.Subtitle>
 
-                <Card.Text className="fs-5">{experience.description}</Card.Text>
+                <Card.Text className="fs-6">{experience.description}</Card.Text>
               </Card.Body>
             </Card>
             </Col>

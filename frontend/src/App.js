@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
-import Education from './pages/Education';
+import Courses from './pages/Courses';
 
 function App() {
   return (
@@ -50,8 +50,8 @@ function App() {
               <NavDropdown.Item href="#projects" className="bg-primary text-warning">
                 Projects
               </NavDropdown.Item>
-              <NavDropdown.Item href="#education" className="bg-primary text-warning">
-                Education
+              <NavDropdown.Item href="#courses" className="bg-primary text-warning">
+                Courses
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
@@ -68,8 +68,8 @@ function App() {
       <div id="projects" className="section">
         <Projects />
       </div>
-      <div id="education" className="section">
-        <Education />
+      <div id="courses" className="section">
+        <Courses />
       </div>
     </>
   );

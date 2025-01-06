@@ -77,11 +77,18 @@ function Projects() {
                   objectPosition: 'top',
                 }}
               />
-              <Card.Body>
+              <Card.Body style={{ color: '#FFC107' }}>
                 <Card.Title>{project.title}</Card.Title>
                 <div className="project-description">
                   <Card.Text>{project.description}</Card.Text>
                 </div>
+                <div>
+                <hr
+                  style={{
+                    border: '1px solid',
+                    marginBottom: '1rem',
+                  }}
+                />
                 {project.github_url ? (
                   <Button href={project.github_url} 
                     target="_blank"
@@ -93,10 +100,11 @@ function Projects() {
                     Github
                   </Button>
                 ) : (
-                  <p className="text-muted mt-3">
+                  <p className="fs-10" style={{ color: '#FFC107' }}>
                     This repository is private due to the University of Michigan Honor Code.
                   </p>
                 )}
+                </div>
                 <hr className="my-3" />
                 <div className="project-skills">
                   {project.info.map((skill, index) => (
