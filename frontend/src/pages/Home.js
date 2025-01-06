@@ -20,7 +20,7 @@ const Home = () => {
             className="text-center mb-4 mb-md-0"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/images/dogs.jpg`}
+              src='https://d1273lu6bgll08.cloudfront.net/dogs.jpg'
               alt="Daniel Rudnick"
               className="rounded-circle shadow-lg img-fluid"
               style={{

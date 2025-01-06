@@ -1,0 +1,28 @@
+service: dannyrudnick-backend
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+functions:
+  api:
+    handler: src/app.handler
+    events:
+      - httpApi:
+          path: /
+          method: ANY
+      - httpApi:
+          path: /{proxy+}
+          method: ANY
+
+plugins:
+  - serverless-dotenv-plugin
+
+package:
+  include:
+    - src/**
+    - node_modules/**
+
+custom:
+  dotenv:
+    path: .env
