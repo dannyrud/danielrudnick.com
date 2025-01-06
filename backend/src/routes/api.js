@@ -33,7 +33,8 @@ router.get('/experience', async (req, res) => {
 
     // Query the database with date formatting
     const [rows, _] = await connection.query(
-      `SELECT 
+      `SELECT
+        id,
         company, 
         position, 
         description, 

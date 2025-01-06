@@ -37,7 +37,12 @@
   
   .project-card:hover .project-description {
     opacity: 1;
-    height: auto; /* Expands to show the full description */
+    height: auto;
+  }
+
+  .course-card:hover .project-description {
+    opacity: 1;
+    height: auto;
   }
   
   .skill-badge {
@@ -49,6 +54,7 @@
     border-radius: 5px;
     font-size: 0.8rem;
   }
+  
   body {
     background-color: #fffde7;
   }
