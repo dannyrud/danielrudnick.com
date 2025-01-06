@@ -5,33 +5,35 @@ const { readerPool } = require('@db');
 
 // Projects endpoint
 router.get('/projects', async (req, res) => {
+  console.log("Received request for /projects");
   try {
-    // Get a connection from the pool
+    console.log("Attempting to get a connection from the pool");
     const connection = await readerPool.getConnection();
 
-    // Query the database
+    console.log("Connection obtained, executing query");
     const [rows, _] = await connection.query(
       'SELECT * FROM projects ORDER BY date DESC'
     );
 
-    // Release the connection back to the pool
+    console.log("Query successful, releasing connection");
     connection.release();
 
-    // Send the query results as JSON
+    console.log("Sending response for /projects");
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching projects:', error);
-    res.status(500).json({ error: 'Failed to fetch projects' });
+    console.error('Error fetching projects:', error.message);
+    res.status(500).json({ error: 'Failed to fetch projects', details: error.message });
   }
 });
 
-// Other endpoints
+// Experience endpoint
 router.get('/experience', async (req, res) => {
+  console.log("Received request for /experience");
   try {
-    // Get a connection from the pool
+    console.log("Attempting to get a connection from the pool");
     const connection = await readerPool.getConnection();
 
-    // Query the database with date formatting
+    console.log("Connection obtained, executing query");
     const [rows, _] = await connection.query(
       `SELECT
         id,
@@ -44,35 +46,37 @@ router.get('/experience', async (req, res) => {
        ORDER BY start DESC`
     );
 
-    // Release the connection back to the pool
+    console.log("Query successful, releasing connection");
     connection.release();
 
-    // Send the query results as JSON
+    console.log("Sending response for /experience");
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching experience:', error);
-    res.status(500).json({ error: 'Failed to fetch experience' });
+    console.error('Error fetching experience:', error.message);
+    res.status(500).json({ error: 'Failed to fetch experience', details: error.message });
   }
 });
 
+// Courses endpoint
 router.get('/courses', async (req, res) => {
+  console.log("Received request for /courses");
   try {
-    // Get a connection from the pool
+    console.log("Attempting to get a connection from the pool");
     const connection = await readerPool.getConnection();
 
-    // Query the database
+    console.log("Connection obtained, executing query");
     const [rows, _] = await connection.query(
       'SELECT * FROM courses ORDER BY date DESC'
     );
 
-    // Release the connection back to the pool
+    console.log("Query successful, releasing connection");
     connection.release();
 
-    // Send the query results as JSON
+    console.log("Sending response for /courses");
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching courses:', error);
-    res.status(500).json({ error: 'Failed to fetch courses' });
+    console.error('Error fetching courses:', error.message);
+    res.status(500).json({ error: 'Failed to fetch courses', details: error.message });
   }
 });
 

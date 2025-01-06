@@ -9,7 +9,7 @@ function Projects() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     let ignoreStaleRequest = false;
-    const url = "http://localhost:5001/api/projects";
+    const url = "https://i47w79jq8b.execute-api.us-east-2.amazonaws.com/api/projects";
     fetch(url, { credentials: "same-origin" })
       .then((response) => {
         if (!response.ok) throw Error(response.statusText);

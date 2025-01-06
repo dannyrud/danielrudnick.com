@@ -10,7 +10,7 @@ function Courses() {
   
   useEffect(() => {
     let ignoreStaleRequest = false;
-    const url = "http://localhost:5001/api/courses";
+    const url = "https://i47w79jq8b.execute-api.us-east-2.amazonaws.com/api/courses";
     fetch(url, { credentials: "same-origin" })
       .then((response) => {
         if (!response.ok) throw Error(response.statusText);
