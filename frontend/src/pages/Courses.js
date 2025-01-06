@@ -6,7 +6,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function Courses() {
-  /*
   const [courses, setCourses] = useState([]);
   
   useEffect(() => {
@@ -27,24 +26,7 @@ function Courses() {
     return () => {
       ignoreStaleRequest = true;
     };
-  }, []); */
-  const courses =
-  [
-    {
-      "id": 1,
-      "title": "EECS 485 - Web Systems",
-      "description": "Learned how to design scalable web systems using Python, Flask, and SQL.",
-      "site_url": "https://eecs485.org",
-      "skills": ["Python", "Flask", "SQL", "JavaScript"]
-    },
-    {
-      "id": 2,
-      "title": "EECS 388 - Computer Security",
-      "description": "Explored topics in cryptography, system security, and network security.",
-      "site_url": "https://eecs388.org",
-      "skills": ["Cryptography", "Python", "Security", "C++"]
-    }
-  ];
+  }, []);
   
   return (
     <Container
@@ -97,7 +79,7 @@ function Courses() {
                 <div>
                   <hr
                     style={{
-                      border: '1px solid #0d6efd',
+                      border: '1px solid #000000',
                       marginBottom: '1rem',
                     }}
                   />
@@ -107,7 +89,7 @@ function Courses() {
                       target="_blank"
                       className="text-light px-4 py-2 rounded shadow-sm"
                       style={{
-                        border: '2px solid #0d6efd',
+                        border: '1px solid #000000',
                         backgroundColor: '#0d6efd',
                       }}
                     >

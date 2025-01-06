@@ -54,7 +54,7 @@ function Experience() {
               <div className="d-flex justify-content-between align-items-center mb-2">
                 <Card.Title className="fs-3 fw-bold mb-0">{experience.company}</Card.Title>
                 <span className="fs-6" style={{ fontStyle: 'italic' }}>
-                  {experience.start_date}-{experience.end_date}
+                  {experience.start_date} - {experience.end_date}
                 </span>
               </div>
                 

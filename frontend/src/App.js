@@ -65,11 +65,11 @@ function App() {
       <div id="experience" className="section">
         <Experience />
       </div>
-      <div id="projects" className="section">
-        <Projects />
-      </div>
       <div id="courses" className="section">
         <Courses />
+      </div>
+      <div id="projects" className="section">
+        <Projects />
       </div>
     </>
   );

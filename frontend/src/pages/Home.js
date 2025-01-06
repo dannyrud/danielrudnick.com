@@ -10,7 +10,6 @@ const Home = () => {
         minHeight: "75vh",
         paddingTop: "4rem",
         paddingBottom: "4rem",
-        background: "linear-gradient(180deg, #fffbe6, #fffcf2)",
       }}
     >
       <Container>

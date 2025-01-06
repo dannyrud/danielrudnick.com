@@ -54,6 +54,26 @@ router.get('/experience', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch experience' });
   }
 });
-router.get('/education', (req, res) => res.json({ page: 'Education' }));
+
+router.get('/courses', async (req, res) => {
+  try {
+    // Get a connection from the pool
+    const connection = await readerPool.getConnection();
+
+    // Query the database
+    const [rows, _] = await connection.query(
+      'SELECT * FROM courses ORDER BY date DESC'
+    );
+
+    // Release the connection back to the pool
+    connection.release();
+
+    // Send the query results as JSON
+    res.json(rows);
+  } catch (error) {
+    console.error('Error fetching courses:', error);
+    res.status(500).json({ error: 'Failed to fetch courses' });
+  }
+});
 
 module.exports = router;
