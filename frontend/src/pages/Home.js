@@ -43,7 +43,7 @@ const Home = () => {
                 fontWeight: "bold",
               }}
             >
-              Hi, I'm Daniel Rudnick!
+              Hi, I'm Daniel
             </h1>
             <p
               className="text-dark"
@@ -74,7 +74,8 @@ const Home = () => {
                   Repacket
                 </a>
               </li>
-              <li>🦮 I love my dogs!</li>
+              <li>🦮 I love my dogs</li>
+              <li>🐻 I am a huge Chicago Cubs fan</li>
             </ul>
 
             <div className="mt-4">
