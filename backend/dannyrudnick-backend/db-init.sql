@@ -38,14 +38,16 @@ VALUES
     'Developed a macOS grocery list app using SwiftUI, featuring the ability to manage multiple lists, add, delete, and toggle the completion status of items. Integrated the OpenAI API to enhance functionality, enabling users to input a recipe and receive parsed grocery items with the option to easily add them to their lists.', 
     'https://d1273lu6bgll08.cloudfront.net/GroceryList.png',
     'https://github.com/dannyrud/GroceryListApp',
-    '2024-07-01', '["Swift", "Open AI API"]'),
+    '2024-07-01', '["Swift", "Open AI API"]'
+)
 (
     'Snake Game', 
     'This C++ project is a text-based implementation of the classic Snake game, developed using the ncurses library for the game interface. The game features a snake that the player controls, navigating through a defined window area to eat fruits (apples) and increase in size. The primary objective is to eat as many fruits as possible without hitting the walls or the snake''s own body. The project uses object-oriented programming principles, and a linked list data structure.',
     'https://d1273lu6bgll08.cloudfront.net/SnakeGame.png',
     'https://github.com/dannyrud/SnakeGame',
     '2023-07-01',
-    '["C++", "Data Structures", "Object Oriented Programming"]');
+    '["C++", "Data Structures", "Object Oriented Programming"]'
+)
 (
     'Instagram Clone', 
     'Built a full-stack Instagram clone combining server-side and client-side dynamic pages. It uses Flask for REST APIs and server-side dynamic page routes, while React powers the client-side dynamic features like infinite scrolling, live updates for likes and comments, and user interactions. The app supports user login, posting, and other core Instagram-like functionalities. Deployed on AWS EC2.', 
@@ -53,6 +55,30 @@ VALUES
     '', 
     '2024-10-13', 
     '["EECS 485", "Python", "Flask", "JavaScript", "React", "HTML", "CSS", "AWS", "SQL", "APIs"]'
+)
+(
+    'Personal Website', 
+    'Built and deployed a fully responsive personal portfolio website to showcase projects, skills, and experience. The frontend was developed using React and hosted on an AWS S3 bucket, with image storage and delivery optimized through AWS CloudFront (CDN) for low latency. It uses HTTPS with a TLS certificate to ensure secure communication. The serverless backend was implemented with Express.js and deployed on AWS Lambda and API Gateway to provide scalable REST API endpoints. A MySQL database hosted on AWS RDS handles efficient storage and retrieval of portfolio data.', 
+    'https://d1273lu6bgll08.cloudfront.net/danielrudnick.com.png',
+    'https://github.com/dannyrud/danielrudnick.com',
+    '2025-01-07', 
+    '["JavaScript", "React", "Node.js", "Express.js", "AWS S3", "AWS CloudFront", "AWS Lambda", "AWS API Gateway", "AWS RDS", "AWS Route53", "MySQL", "TLS/HTTPS", "REST APIs"]'
+)
+(
+    'Map Reduce', 
+    'Developed a Python-based MapReduce framework inspired by Google’s original paper. The framework consists of two major components: a Manager that listens for user-submitted jobs and distributes tasks among multiple Workers, and Workers that execute map and reduce tasks to complete a MapReduce program. Utilized TCP and UDP sockets for communication between the Manager and Workers, implementing features like task assignment, heartbeat monitoring for fault tolerance, and Worker registration. Strengthened understanding of distributed systems, networking, and multithreading.',
+    'https://d1273lu6bgll08.cloudfront.net/MapReduce.png',
+    '',
+    '2024-11-10', 
+    '["EECS 485", "Python", "Distributed Systems", "Networking", "TCP/UDP", "Sockets", "Multithreading"]'
+)
+(
+    'Search Engine', 
+    'Developed a scalable search engine inspired by Google and Bing. The project consisted of three main components: an inverted index pipeline built with Python MapReduce programs to process large-scale HTML document collections and calculate TF-IDF scores; an Index Server, implemented as a REST API backend, that calculates weighted scores using TF-IDF and PageRank while serving JSON-formatted search results; and a Search Server, offering a dynamic web interface for query submission and ranked result display.',
+    'https://d1273lu6bgll08.cloudfront.net/SearchEngine.png',
+    '',
+    '2024-12-4', 
+    '["EECS 485", "Python", "Flask", "REST API", "MapReduce", "PageRank", "TF-IDF", "Information Retrieval", "Parallel Processing", "Multithreading"]'
 );
 
 INSERT INTO experiences (company, position, description, start, end)
@@ -116,4 +142,11 @@ VALUES
     'Introduction to the mathematical foundations of computer science. Topics covered include: prepositional and predicate logic, set theory, function and relations, growth of functions and asymptotic notation, introduction to algorithms, elementary combinatorics, and graph theory, and discrete probability theory.',
     '2023-01-01',
     '["University of Michigan", "Winter 2023", "Proofs", "Math"]'
+);
+(
+    'EECS 183: Elementary Programming Concepts',
+    'https://eecs183.github.io/eecs183.org/',
+    'EECS 183 is an introductory course to computer science and programming, covering the basics of computing as well as problem-solving and algorithmic thinking.',
+    '2022-09-01',
+    '["University of Michigan", "Fall 2022", "C++"]'
 );
