@@ -1,14 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-const { readerPool } = require('@db');
+const pool  = require('@db');
 
 // Projects endpoint
 router.get('/projects', async (req, res) => {
   console.log("Received request for /projects");
   try {
     console.log("Attempting to get a connection from the pool");
-    const connection = await readerPool.getConnection();
+    const connection = await pool.getConnection();
 
     console.log("Connection obtained, executing query");
     const [rows, _] = await connection.query(
@@ -31,7 +31,7 @@ router.get('/experience', async (req, res) => {
   console.log("Received request for /experience");
   try {
     console.log("Attempting to get a connection from the pool");
-    const connection = await readerPool.getConnection();
+    const connection = await pool.getConnection();
 
     console.log("Connection obtained, executing query");
     const [rows, _] = await connection.query(
@@ -62,7 +62,7 @@ router.get('/courses', async (req, res) => {
   console.log("Received request for /courses");
   try {
     console.log("Attempting to get a connection from the pool");
-    const connection = await readerPool.getConnection();
+    const connection = await pool.getConnection();
 
     console.log("Connection obtained, executing query");
     const [rows, _] = await connection.query(

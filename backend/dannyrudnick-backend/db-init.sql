@@ -79,7 +79,47 @@ VALUES
     '',
     '2024-12-4', 
     '["EECS 485", "Python", "Flask", "REST API", "MapReduce", "PageRank", "TF-IDF", "Information Retrieval", "Parallel Processing", "Multithreading"]'
-);
+)
+(
+    'Digital Forensics', 
+    'Investigated a fake suspect of a crime by inspeting their virtual hard drive, virtual machine, and internet footprint. This included recovering deleted files and conducting various attacks (length extension, XSS, CSRF, SQL injection, buffer overflow, password-cracking) to find details about the person. Probably the coolest school project I have ever done!',
+    'https://d1273lu6bgll08.cloudfront.net/DigitalForensics.jpg',
+    '',
+    '2024-12-4', 
+    '["EECS 388", "Python", "C", "Autopsy", "Cryptography", "Web Security", "Application Security", "GDB", "Forensics"]'
+)
+(
+    'Application Security', 
+    'Completed many different types of Buffer Overflow attacks with varying complexity. Attacks consisted of Shellcode Injection, Pointer Manipulation, Return-to-Libc, Return-Oriented Programming (ROP), NOP Sleds, and Binary Disassembling. This project taught me how to analyze a vulnerable program, identify potential weaknesses, and exploit them to achieve arbitrary code execution or gain elevated privileges.',
+    'https://d1273lu6bgll08.cloudfront.net/ApplicationSecurity.png',
+    '',
+    '2024-11-6', 
+    '["EECS 388", "Python", "C", "Ghidra", "GDB"]'
+)
+(
+    'Network Security', 
+    'Conducted various network attacks on a course-designed server, including network traffic analysis, password cracking, certificate forgery, DNS poisoning, and time-based MFA circumvention.',
+    'https://d1273lu6bgll08.cloudfront.net/NetworkSecurity.png',
+    '',
+    '2024-10-7', 
+    '["EECS 388", "Python", "Wireshark", "John the Ripper"]'
+)
+(
+    'Web Security', 
+    'Conducted various web-based attacks on a course-designed server, including XSS, CSRF, and SQL injection. The attacks were implemented in Python',
+    'https://d1273lu6bgll08.cloudfront.net/WebSecurity.png',
+    '',
+    '2024-9-25', 
+    '["EECS 388", "Python", "XSS", "SQL Injection", "CSRF"]'
+)
+(
+    'Cryptography', 
+    'Conducted 4 types of Cryptographic exploits. The exploits included a length extension attack on SHA-256, creating MD5 hash collisons, A CBC padding oracle attack, and  Bleichenbacher''s e=3 RSA signature forgery',
+    'https://d1273lu6bgll08.cloudfront.net/Cryptography.png',
+    '',
+    '2024-9-15', 
+    '["EECS 388", "Python", "Cryptography", "Hash Functions", "Length Extension Attack", "RSA", "Padding Oracle", "Cryptographic Doom Principle"]'
+)
 
 INSERT INTO experiences (company, position, description, start, end)
 VALUES 
